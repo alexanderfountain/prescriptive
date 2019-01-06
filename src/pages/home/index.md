@@ -1,7 +1,12 @@
 ---
-templateKey: 'home-page'
-path: /
+templateKey: home-page
 title: Prescriptive
+intro:
+  description: >-
+    Prescriptive Data Solutions helps our enterprise customers gain competitive
+    advantage through information technology consulting, solutions, integration,
+    and managed services.
+  heading: The Next Generation IT Solutions Partner
+  introimage: /img/prescriptive_banner.jpg
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+
