@@ -10,8 +10,10 @@ import '../css/main.css'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet title="Home | Prescriptive" />
+    <header className="header">
     <Topsocial />
     <Navbar />
+    </header>
     <div>{children}</div>
     <Footer />
   </div>
