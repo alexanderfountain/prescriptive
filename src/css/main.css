@@ -693,32 +693,32 @@ h6,
 	color: inherit;
 }
 
-h1,
+.h1, .content h1,
 .h1 {
 	font-size: 30px;
 }
 
-h2,
+h2, .content h2,
 .h2 {
 	font-size: 27px;
 }
 
-h3,
+h3, .content h3,
 .h3 {
 	font-size: 23px;
 }
 
-h4,
+h4, .content h4,
 .h4 {
 	font-size: 21px;
 }
 
-h5,
+h5, .content h5,
 .h5 {
 	font-size: 17px;
 }
 
-h6,
+h6, .content h6,
 .h6 {
 	font-size: 15px;
 }
@@ -1150,6 +1150,9 @@ input[type="submit"] {
 	min-height: 330px;
 }
 
+.hero-holder h1{
+	color:white;
+}
 /*services section*/
 
 .services {
@@ -1955,15 +1958,15 @@ input[type="submit"] {
 		color: #646772;
 	}
 
-	h1 {
+	h1, .content h1 {
 		font-size: 50px;
 	}
 
-	h2 {
+	h2, .content h2 {
 		font-size: 38px;
 	}
 
-	p {
+	p, .content p {
 		font-size: 18px;
 	}
 
