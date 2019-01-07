@@ -2,6 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import consulting from '../images/three-heads-idea-icon.png'
+import planning from '../images/security-icon.png'
+import cloud from '../images/Cloud-DL-icon.png'
+import data from '../images/db-icon-black.png'
+import backup from '../images/ssd-icon-black.png'
+import security from '../images/Cloud_lock.png'
+import analytics from '../images/Monitor-graph-icon.png'
 
 export const IndexPageTemplate = ({
   introdescription,
@@ -39,7 +46,7 @@ export const IndexPageTemplate = ({
 					<div class="services-list">
 						<div class="services-item">
 							<div class="image-holder">
-								<img src="images/three-heads-idea-icon.png" alt="Consulting" />
+								<img src={consulting} alt="Consulting" />
 							</div>
 							<div class="description">
 								<p>Consulting</p>
@@ -47,7 +54,7 @@ export const IndexPageTemplate = ({
 						</div>
 						<div class="services-item">
 							<div class="image-holder">
-								<img src="images/security-icon.png" alt="Infrastructure Planning, Design and Implementation" />
+								<img src={planning} alt="Infrastructure Planning, Design and Implementation" />
 							</div>
 							<div class="description">
 								<p>Infrastructure Planning, Design and Implementation</p>
@@ -55,7 +62,7 @@ export const IndexPageTemplate = ({
 						</div>
 						<div class="services-item">
 							<div class="image-holder">
-								<img src="images/Cloud-DL-icon.png" alt="On-prem, Cloud, and Hybrid Integration" />
+								<img src={cloud} alt="On-prem, Cloud, and Hybrid Integration" />
 							</div>
 							<div class="description">
 								<p>On-prem, Cloud, and Hybrid Integration</p>
@@ -63,7 +70,7 @@ export const IndexPageTemplate = ({
 						</div>
 						<div class="services-item">
 							<div class="image-holder">
-								<img src="images/db-icon-black.png" alt="Data Management" />
+								<img src={data} alt="Data Management" />
 							</div>
 							<div class="description">
 								<p>Data Management</p>
@@ -71,7 +78,7 @@ export const IndexPageTemplate = ({
 						</div>
 						<div class="services-item">
 							<div class="image-holder">
-								<img src="images/ssd-icon-black.png" alt="Managed Backup and Disaster Recovery (BDR" />
+								<img src={backup} alt="Managed Backup and Disaster Recovery (BDR" />
 							</div>
 							<div class="description">
 								<p>Managed Backup and Disaster Recovery (BDR)</p>
@@ -79,7 +86,7 @@ export const IndexPageTemplate = ({
 						</div>
 						<div class="services-item">
 							<div class="image-holder">
-								<img src="images/Cloud_lock.png" alt="Managed Security Detection and Response (MDR)" />
+								<img src={security} alt="Managed Security Detection and Response (MDR)" />
 							</div>
 							<div class="description">
 								<p>Managed Security Detection and Response (MDR)</p>
@@ -87,7 +94,7 @@ export const IndexPageTemplate = ({
 						</div>
 						<div class="services-item">
 							<div class="image-holder">
-								<img src="images/Monitor-graph-icon.png" alt="Analytics / Business Intelligence" />
+								<img src={analytics} alt="Analytics / Business Intelligence" />
 							</div>
 							<div class="description">
 								<p>Analytics / Business Intelligence</p>
