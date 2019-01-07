@@ -3,77 +3,65 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
-export default class IndexPage extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+export const IndexPageTemplate = ({
+  introdescription,
+  title,
+  heading,
+  introimage,
+}) => (
+  <div style={{ backgroundImage: `url(${introimage})` }}>
+    <h1>{title}</h1>
+    <h2>{heading}</h2>
+    <h3>{introdescription}</h3>
+    
+  </div>
+)
 
-    return (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
-              ))}
-          </div>
-        </section>
-      </Layout>
-    )
-  }
+IndexPageTemplate.propTypes = {
+  intro: PropTypes.shape({
+    heading: PropTypes.string,
+    description: PropTypes.string,
+    introimage: PropTypes.string,
+  }),
+}
+
+const IndexPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
+
+  return (
+    <Layout>
+      <IndexPageTemplate
+        title={frontmatter.title}
+        heading={frontmatter.intro.heading}
+        introdescription={frontmatter.intro.description}
+        introimage={frontmatter.intro.introimage}
+      />
+    </Layout>
+  )
 }
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
     }),
   }),
 }
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
+export default IndexPage
+
+export const indexPageQuery = graphql`
+query IndexByPath($path: String!){
+  markdownRemark(frontmatter: {path:{eq: $path}}){
+      frontmatter{
+          path
+          title
+          intro{
+            heading
+            description
+            introimage
           }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
       }
-    }
   }
+}
 `
