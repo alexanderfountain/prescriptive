@@ -17,6 +17,27 @@ import leader13 from '../images/img13.jpg'
 import leader14 from '../images/img14.jpg'
 import leader15 from '../images/img15.jpg'
 import contactdots from '../images/Dots_Contact.png'
+import partner17 from '../images/img17.png'
+import partner18 from '../images/img18.png'
+import partner19 from '../images/img19.png'
+import partner20 from '../images/img20.png'
+import partner21 from '../images/img21.png'
+import partner22 from '../images/img22.png'
+import partner23 from '../images/img23.png'
+import partner24 from '../images/img24.png'
+import partner25 from '../images/img25.png'
+import partner26 from '../images/img26.png'
+import partner27 from '../images/img27.png'
+import partner28 from '../images/img28.png'
+import partner29 from '../images/img29.png'
+import partner30 from '../images/img30.png'
+import partner31 from '../images/img31.png'
+import partner32 from '../images/img32.png'
+import partner33 from '../images/img33.png'
+import partner34 from '../images/img34.png'
+import partner35 from '../images/img35.png'
+import cta36 from '../images/img36.png'
+
 
 export const IndexPageTemplate = ({
   introdescription,
@@ -328,50 +349,56 @@ export const IndexPageTemplate = ({
 				</div>
 </section>
 
+<section class="partners">
+				<div class="container">
+					<div class="caption-holder caption-white">
+						<h2>Partners</h2>
+					</div>
 
-      {/* <section id="contact-us" class="contact-us" style={{ backgroundImage: `url(${contactdots})` }}>
+					<div class="partners-list">
+						<div class="partner-item"><img src={partner17} alt="amazon-web-services" /></div>
+						<div class="partner-item"><img src={partner18} alt="cisco" /></div>
+						<div class="partner-item"><img src={partner19} alt="commvault" /></div>
+						<div class="partner-item"><img src={partner20} alt="docker" /></div>
+						<div class="partner-item"><img src={partner21} alt="hitachi" /></div>
+						<div class="partner-item"><img src={partner22} alt="indexengines" /></div>
+						<div class="partner-item"><img src={partner23} alt="microsoft" /></div>
+						<div class="partner-item"><img src={partner24} alt="net-app" /></div>
+						<div class="partner-item"><img src={partner25} alt="nutanix" /></div>
+						<div class="partner-item"><img src={partner26} alt="palo-alto" /></div>
+						<div class="partner-item"><img src={partner27} alt="qct" /></div>
+						<div class="partner-item"><img src={partner28} alt="red-hat-white" /></div>
+						<div class="partner-item"><img src={partner29} alt="rubrik" /></div>
+						<div class="partner-item"><img src={partner30} alt="sendero-cloud" /></div>
+						<div class="partner-item"><img src={partner31} alt="spectra" /></div>
+						<div class="partner-item"><img src={partner32} alt="turbonomic-lg-white" /></div>
+						<div class="partner-item"><img src={partner33} alt="veeam" /></div>
+						<div class="partner-item"><img src={partner34} alt="vmware" /></div>
+						<div class="partner-item"><img src={partner35} alt="zerto" /></div>
+					</div>
+				</div>
+
+			</section>
+
+
+			<section class="call-to-action">
 
 				<div class="container">
+					<div class="bg-image">
+						<img src={cta36} alt="image description" />
+					</div>
+					<div class="content">
 
-					<div class="top-content">
-						<div class="content">
-
-							<div class="caption-holder caption-red">
-								<h2>Contact Us</h2>
-								<p>Thank you for your interest in Prescriptive Data Solutions. For more information, please fill out the following form and we'll get back to you as soon as we can. We look forward to hearing from you!</p>
-							</div>
-
-							<form name="contact3" method="POST" class="form-validation" novalidate="novalidate" netlify-honeypot="bot-field" data-netlify="true">
-								<div class="form-group important">
-										 <label>Important: </label><input name="important">
-								</div>
-								<div class="form-group">
-									<label for="name" class="lb-name">First Name *</label>
-									<input type="text" name="name" id="name" class="form-control" data-required="true" data-interactive="true">
-								</div>
-								<div class="form-group">
-									<label for="surname" class="lb-surname">Last Name *</label>
-									<input type="text" name="surname" id="surname" class="form-control" data-required="true" data-interactive="true">
-								</div>
-								<div class="form-group">
-									<label for="email" class="lb-email">Email *</label>
-									<input type="email" name="email" id="email" class="form-control" data-required="true" data-interactive="true">
-								</div>
-								<div class="form-group">
-									<label for="phone" class="lb-phone">Phone Number</label>
-									<input type="tel" name="phone" id="phone" class="form-control" data-required="false" data-interactive="true">
-								</div>
-								<div class="form-group text">
-									<label for="textarea" class="lb-message">Message*</label>
-									<textarea name="textarea" id="textarea" class="textarea form-control" data-required="true" data-trim="true"></textarea>
-								</div>
-								<div>
-									<button type="submit" class="btn btn-submit">Send Message</button>
-								</div>
-							</form>
+						<div class="caption-holder caption-red">
+							<h2>Looking for Expert Advice?</h2>
+							<p>We’re happy to help.</p>
 						</div>
-						
-			</section> */}
+
+						<a href="#contact-us" class="btn btn-sm">Contact Us</a>
+					</div>
+				</div>
+				
+			</section>
 
   </main>
 )
