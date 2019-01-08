@@ -3,6 +3,15 @@ import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../images/Prescriptive-new-logo-resized.png'
 
+const SCROLL_MAX_FRAMES_WITHOUT_PAGE_OFFSET_CHANGE = 30;
+
+if (typeof window !== 'undefined') {
+  // Make scroll behavior of internal links smooth
+  // eslint-disable-next-line global-require
+  require('smooth-scroll')('a[href*="#"]');
+  console.log('unde');
+}
+
 const Navbar = () => (
 <div className="main-nav">
 <div className="container">
@@ -11,10 +20,10 @@ const Navbar = () => (
   </Link>
   <nav className="nav">
     <ul className="navigation-list">
-      <li><Link to="#wrapper">Home</Link></li>
-      <li><Link to="#services">Services</Link></li>
-      <li><Link to="#about">About</Link></li>
-      <li><Link to="#contact-us" class="btn btn-sm">Contact</Link></li>
+      <li><a href="/#header">Home</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#contact-us" class="btn btn-sm">Contact</a></li>
     </ul>
   </nav>
 

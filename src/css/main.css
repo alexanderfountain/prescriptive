@@ -2082,3 +2082,9 @@ input[type="submit"] {
 .blog-index{
 	margin-top:115px;
 }
+
+body {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
