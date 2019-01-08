@@ -14,7 +14,7 @@ const Topsocial = () => (
       </li>
     </ul>
     <ul class="global-list">
-      <li><Link to="#">Blog</Link></li>
+      <li><Link to="/blog">Blog</Link></li>
       <li><Link to="#">Careers</Link></li>
     </ul> 
   </div>

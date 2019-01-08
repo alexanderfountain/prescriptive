@@ -6,7 +6,7 @@ import logo from '../images/Prescriptive-new-logo-resized.png'
 const Navbar = () => (
 <div className="main-nav">
 <div className="container">
-  <Link to="#" class="navbar-brand">
+  <Link to="/" class="navbar-brand">
     <img style={{width: "355px"}} src={logo} alt="prescriptive" />
   </Link>
   <nav className="nav">
