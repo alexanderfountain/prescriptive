@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import '../../node_modules/font-awesome/css/font-awesome.min.css'; 
 
 import blogindexheader from '../images/img01.jpg'
 
@@ -31,7 +32,7 @@ export default class BlogPage extends React.Component {
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <small>By {post.frontmatter.author} on {post.frontmatter.date}</small>
+                    <small><i className="fa fa-user"></i>{post.frontmatter.author} <i className="fa fa-calendar"></i>{post.frontmatter.date}</small>
                   </p>
                   <p>
                     {post.excerpt}

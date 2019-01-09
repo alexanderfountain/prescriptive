@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../images/Prescriptive-new-logo-resized.png'
-// import SmoothScroll from 'smooth-scroll'
+import SmoothScroll from '../../node_modules/smooth-scroll'
 
 if (typeof window !== 'undefined') {
-  // var scroll = new SmoothScroll('a[href*="#"]', {
-  //   offset: 150, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
-  // });
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    offset: 150, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+  });
 }
 
 const Navbar = () => (
