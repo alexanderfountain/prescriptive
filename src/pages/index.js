@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import hero1 from '../images/Prescriptive_Banner.jpg'
 import consulting from '../images/three-heads-idea-icon.png'
 import planning from '../images/security-icon.png'
 import cloud from '../images/Cloud-DL-icon.png'
@@ -40,13 +41,13 @@ import cta36 from '../images/img36.png'
 
 
 export const IndexPageTemplate = ({
-  introdescription,
-  title,
-  heading,
-  introimage,
+//   introdescription,
+//   title,
+//   heading,
+//   introimage,
 }) => (
   <main className="main">
-  <section className="hero" style={{ backgroundImage: `url(${introimage})` }}>
+  <section className="hero" style={{ backgroundImage: `url(${hero1})` }}>
 
     <div class="hero-holder">
 
@@ -54,9 +55,9 @@ export const IndexPageTemplate = ({
 
 						<div class="content">
 							<div class="caption-holder">
-								<h1>{heading}</h1>
+								<h1>The Next Generation IT Solutions Partner</h1>
 							</div>
-							<p>{introdescription}</p>
+							<p>Prescriptive Data Solutions helps our enterprise customers gain competitive advantage through information technology consulting, solutions, integration, and managed services.</p>
 						</div>
 
 					</div>
@@ -417,10 +418,10 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        title={frontmatter.title}
-        heading={frontmatter.intro.heading}
-        introdescription={frontmatter.intro.description}
-        introimage={frontmatter.intro.introimage}
+        // title={frontmatter.title}
+        // heading={frontmatter.intro.heading}
+        // introdescription={frontmatter.intro.description}
+        // introimage={frontmatter.intro.introimage}
       />
     </Layout>
   )

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
+import blogindexheader from '../images/img01.jpg'
+
 
 export default class BlogPage extends React.Component {
   render() {
@@ -12,15 +14,15 @@ export default class BlogPage extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container blog-index">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+            <div className="content blog-index-header" style={{ backgroundImage: `url(${blogindexheader})` }}>
+              <h1 className="has-text-weight-bold is-size-2">Blog</h1>
             </div>
+          <div className="container blog-index">
+
             {posts
               .map(({ node: post }) => (
                 <div
                   className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
                   key={post.id}
                 >
                   <p>

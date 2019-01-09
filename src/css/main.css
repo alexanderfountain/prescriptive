@@ -2078,9 +2078,11 @@ input[type="submit"] {
 		margin: 0 0 20px;		
 	}
 }
-
+.blog-index-header{
+	/* margin-top:110px; */
+}
 .blog-index{
-	margin-top:115px;
+	/* margin-top:115px; */
 }
 
 body {
@@ -2088,3 +2090,25 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
+  .blog-index-header{
+	  padding:100px 0px;
+	  text-align:center;
+  }
+  .blog-index-header h1{
+	color:white;
+  }
+  .section{
+	  padding:158px 0px;
+  }
+.blog-index{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+} 
+.blog-index .content{
+	flex-basis:calc(33% - 25px);
+	width:calc(33% - 60px);
+	background-color:#ebebeb;
+	padding:35px;
+	margin-bottom:25px !important;
+}
