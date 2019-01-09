@@ -25,12 +25,13 @@ export default class BlogPage extends React.Component {
                   className="content"
                   key={post.id}
                 >
+                <div class="blog-teaser-image"><img src={post.frontmatter.image} /></div>
                   <p>
                     <Link className="has-text-primary" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
+                    <small>By {post.frontmatter.author} on {post.frontmatter.date}</small>
                   </p>
                   <p>
                     {post.excerpt}
@@ -74,6 +75,8 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            image
+            author
           }
         }
       }
