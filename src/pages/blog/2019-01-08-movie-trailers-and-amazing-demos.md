@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: Movie Trailers and Amazing Demos
+author: Terry Murray
+image: /img/movie-trailer-pic.jpg
 date: 2018-03-20T12:00:00.000Z
 description: >-
   I’m not suggesting demos are bad, just that you shouldn’t become mesmerized by
