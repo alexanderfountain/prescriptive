@@ -1,14 +1,8 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../images/Prescriptive-new-logo-resized.png'
-import SmoothScroll from '../../node_modules/smooth-scroll'
-
-if (typeof window !== 'undefined') {
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    offset: 150, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
-  });
-}
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Navbar = () => (
 <div className="main-nav">
@@ -18,10 +12,10 @@ const Navbar = () => (
   </Link>
   <nav className="nav">
     <ul className="navigation-list">
-      <li><a href="#header">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact-us" class="btn btn-sm">Contact</a></li>
+      <li><AnchorLink offset='158' href="#header">Home</AnchorLink></li>
+      <li><AnchorLink offset='158' href="#services">Services</AnchorLink></li>
+      <li><AnchorLink offset='158' href="#about">About</AnchorLink></li>
+      <li><AnchorLink offset='158' href="#contact-us" class="btn btn-sm">Contact</AnchorLink></li>
     </ul>
   </nav>
 
@@ -33,6 +27,8 @@ const Navbar = () => (
 
 </div>
 </div>
+
 )
 
 export default Navbar
+
