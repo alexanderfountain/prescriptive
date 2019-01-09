@@ -46,7 +46,7 @@ export const IndexPageTemplate = ({
 //   heading,
 //   introimage,
 }) => (
-  <main className="main">
+  <main id="main" className="main">
   <section className="hero" style={{ backgroundImage: `url(${hero1})` }}>
 
     <div class="hero-holder">

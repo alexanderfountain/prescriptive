@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { Link } from 'gatsby'
 import logo from '../images/Prescriptive-new-logo-resized.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Mobilemenu from '../components/Mobilemenu'
 
 const Navbar = () => (
 <div className="main-nav">
@@ -19,11 +20,7 @@ const Navbar = () => (
     </ul>
   </nav>
 
-  <Link to="#" className="hamburger hamburger--collapse hamburger--squeeze">
-    <span className="hamburger-box">
-      <span className="hamburger-inner"></span>
-    </span>
-  </Link>
+  <Mobilemenu />
 
 </div>
 </div>
