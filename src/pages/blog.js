@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import '../../node_modules/font-awesome/css/font-awesome.min.css'; 
 
@@ -14,6 +15,9 @@ export default class BlogPage extends React.Component {
 
     return (
       <Layout>
+        	<Helmet>
+	        <body class="innermenu" />
+  	      </Helmet>
         <section className="section">
             <div className="content blog-index-header" style={{ backgroundImage: `url(${blogindexheader})` }}>
               <h1 className="has-text-weight-bold is-size-2">Blog</h1>

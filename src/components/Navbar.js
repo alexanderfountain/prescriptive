@@ -6,7 +6,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Mobilemenu from '../components/Mobilemenu'
 
 const Navbar = () => (
-<div className="main-nav">
+<div className="main-nav main-nav-home">
 <div className="container">
   <Link to="/" class="navbar-brand">
     <img style={{width: "355px"}} src={logo} alt="prescriptive" />

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Helmet from 'react-helmet'
 import hero1 from '../images/Prescriptive_Banner.jpg'
 import consulting from '../images/three-heads-idea-icon.png'
 import planning from '../images/security-icon.png'
@@ -417,6 +418,9 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+	<Helmet>
+	<body class="home" />
+  	</Helmet>
       <IndexPageTemplate
         // title={frontmatter.title}
         // heading={frontmatter.intro.heading}
