@@ -4,13 +4,6 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { Link } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
-import consulting from '../images/three-heads-idea-icon.png'
-import planning from '../images/security-icon.png'
-import cloud from '../images/Cloud-DL-icon.png'
-import data from '../images/db-icon-black.png'
-import backup from '../images/ssd-icon-black.png'
-import security from '../images/Cloud_lock.png'
-import analytics from '../images/Monitor-graph-icon.png'
 import about9 from '../images/img09.jpg'
 import aboutabstract from '../images/Abstract_White_Bkgd.jpg'
 import about11 from '../images/img11.jpg'
@@ -40,11 +33,10 @@ import partner34 from '../images/img34.png'
 import partner35 from '../images/img35.png'
 import cta36 from '../images/img36.png'
 
-export const HomePageTemplate = ({ title, introheading, introdescription, introimage, content, contentComponent }) => {
-
+export const HomePageTemplate = ({ title, intro, services, content, contentComponent }) => {
   return (
 <main id="main" className="main">
-  <section className="hero" style={{ backgroundImage: `url(${introimage})` }}>
+  <section className="hero" style={{ backgroundImage: `url(${intro.introimage})` }}>
 
     <div class="hero-holder">
 
@@ -52,9 +44,9 @@ export const HomePageTemplate = ({ title, introheading, introdescription, introi
 
 						<div class="content">
 							<div class="caption-holder">
-								<h1>{introheading}</h1>
+								<h1>{intro.heading}222</h1>
 							</div>
-							<p>{introdescription}</p>
+							<p>{intro.description}</p>
 						</div>
 
 					</div>
@@ -71,62 +63,16 @@ export const HomePageTemplate = ({ title, introheading, introdescription, introi
 					</div>
 
 					<div class="services-list">
-						<div class="services-item">
-							<div class="image-holder">
-								<img src={consulting} alt="Consulting" />
+          {services.map(service => (
+            <div class="services-item">
+            <div class="image-holder">
+              <img src={service.icontext.icon} alt={service.icontext.text} />
+            </div>
+            <div class="description">
+								<p>{service.icontext.text}</p>
 							</div>
-							<div class="description">
-								<p>Consulting</p>
-							</div>
-						</div>
-						<div class="services-item">
-							<div class="image-holder">
-								<img src={planning} alt="Infrastructure Planning, Design and Implementation" />
-							</div>
-							<div class="description">
-								<p>Infrastructure Planning, Design and Implementation</p>
-							</div>
-						</div>
-						<div class="services-item">
-							<div class="image-holder">
-								<img src={cloud} alt="On-prem, Cloud, and Hybrid Integration" />
-							</div>
-							<div class="description">
-								<p>On-prem, Cloud, and Hybrid Integration</p>
-							</div>
-						</div>
-						<div class="services-item">
-							<div class="image-holder">
-								<img src={data} alt="Data Management" />
-							</div>
-							<div class="description">
-								<p>Data Management</p>
-							</div>
-						</div>
-						<div class="services-item">
-							<div class="image-holder">
-								<img src={backup} alt="Managed Backup and Disaster Recovery (BDR" />
-							</div>
-							<div class="description">
-								<p>Managed Backup and Disaster Recovery (BDR)</p>
-							</div>
-						</div>
-						<div class="services-item">
-							<div class="image-holder">
-								<img src={security} alt="Managed Security Detection and Response (MDR)" />
-							</div>
-							<div class="description">
-								<p>Managed Security Detection and Response (MDR)</p>
-							</div>
-						</div>
-						<div class="services-item">
-							<div class="image-holder">
-								<img src={analytics} alt="Analytics / Business Intelligence" />
-							</div>
-							<div class="description">
-								<p>Analytics / Business Intelligence</p>
-							</div>
-						</div>
+          </div>
+          ))}
 					</div>
 				</div>
 
@@ -407,6 +353,11 @@ HomePageTemplate.propTypes = {
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   introheading: PropTypes.string,
+  services: PropTypes.arrayOf(
+    PropTypes.shape({
+      icontext: PropTypes.array,
+    })
+  ),
 }
 
 const HomePage = ({ data }) => {
@@ -420,6 +371,8 @@ const HomePage = ({ data }) => {
         introheading={post.frontmatter.intro.heading}
         introdescription={post.frontmatter.intro.description}
         introimage={post.frontmatter.intro.introimage}
+        intro={post.frontmatter.intro}
+        services={post.frontmatter.services}
         content={post.html}
       />
     </Layout>
@@ -445,6 +398,12 @@ export const homePageQuery = graphql`
           heading
           description
           introimage
+        }
+        services{
+          icontext{
+            icon
+            text
+          }
         }
       }
     }
