@@ -44,7 +44,7 @@ export const HomePageTemplate = ({ title, intro, services, content, contentCompo
 
 						<div class="content">
 							<div class="caption-holder">
-								<h1>{intro.heading}222</h1>
+								<h1>{intro.heading}</h1>
 							</div>
 							<p>{intro.description}</p>
 						</div>
