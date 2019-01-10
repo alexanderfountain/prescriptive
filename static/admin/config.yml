@@ -39,3 +39,13 @@ collections:
           - {label: "Path", name: "path", widget: "hidden", default: "/"}
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: object, fields: [{label: Intro Image, name: introimage, widget: image},{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - label: Icon Text
+                name: icontext
+                widget: object
+                fields:
+                  - {label: Text, name: text, widget: string}
+                  - {label: Icon, name: icon, widget: image}

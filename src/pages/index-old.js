@@ -442,17 +442,26 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const indexPageQuery = graphql`
-query IndexByPath($path: String!){
-  markdownRemark(frontmatter: {path:{eq: $path}}){
-      frontmatter{
-          path
-          title
-          intro{
-            heading
-            description
-            introimage
+query IndexQuery {
+    allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "home-page" } }}
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          fields {
+            slug
           }
+          frontmatter {
+            title
+            templateKey
+			intro{
+				heading
+			}
+          }
+        }
       }
+    }
   }
-}
 `
