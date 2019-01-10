@@ -2111,12 +2111,42 @@ body {
 	background-color:#ebebeb;
 	padding:35px;
 	margin-bottom:25px !important;
+	color:#56575b !important;
+}
+@media (max-width: 1024px) {
+	.blog-index .content{
+		flex-basis:calc(100%);
+		width:calc(100%);
+	}
 }
 .blog-index .content a.has-text-primary{
 	color:#56575b !important;
 	font-size:26px;
+	display:block;
+	margin-bottom:15px;
+	margin-top:15px;
+	font-weight:bold;
 }
-
+.who i{
+	margin-right:5px;
+	font-size:20px;
+}
+.who{
+	margin-bottom:15px;
+	font-weight:bold;
+	font-size:18px;
+}
+.blog-btn{
+color:white !important;
+}
+.teaser-body{
+	font-size:18px;
+	line-height:23px;
+	margin-bottom:30px;
+}
+.blog-date{
+	margin-right:20px;
+}
 /* Position and sizing of burger button */
 .bm-burger-button {
 	width: 36px;

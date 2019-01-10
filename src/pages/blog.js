@@ -31,21 +31,17 @@ export default class BlogPage extends React.Component {
                   key={post.id}
                 >
                 <div class="blog-teaser-image"><img src={post.frontmatter.image} /></div>
-                  <p>
                     <Link className="has-text-primary" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <small><i className="fa fa-user"></i>{post.frontmatter.author} <i className="fa fa-calendar"></i>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
+                    <div class="who"><span class="blog-date"><i className="fa fa-calendar"></i>{post.frontmatter.date}</span> <span><i className="fa fa-user"></i>{post.frontmatter.author}</span></div>
+                    <div class="teaser-body">
                     {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
+                    </div>
+                    <Link className="btn blog-btn" to={post.fields.slug}>
+                      Read Full Article
                     </Link>
-                  </p>
+
                 </div>
               ))}
           </div>
