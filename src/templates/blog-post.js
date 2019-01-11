@@ -23,11 +23,11 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <Layout>
-      <Helmet>
-	      <body class="innermenu" />
-  	  </Helmet>
     <section className="section">
+    <Helmet>
+    <body class="innermenu" />
+    </Helmet>
+
       {helmet || ''}
             <div className="content blog-index-header" style={{ backgroundImage: `url(${blogindexheader})` }}>
               <h2 className="header-title">Blog</h2>
@@ -41,31 +41,18 @@ export const BlogPostTemplate = ({
             </h1>
             <div class="who"><span class="blog-date"><i className="fa fa-calendar"></i>{date}</span> <span><i className="fa fa-user"></i>{author}</span></div>
             <PostContent content={content} />
-            {/* {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null} */}
             <div class="blog-share"><span>SHARE THIS ARTICLE WITH A FRIEND</span><i className="fa fa-facebook-f"></i> <i className="fa fa-twitter"></i> <i className="fa fa-linkedin"></i></div>
       </div>
       <div class="sidebar">
       <div class="cta-contact" style={{ backgroundImage: `url(${sidebarbg})` }}>
                 <h3>Looking for Expert Advice?</h3>
                 <p>We're here happy to help</p>
-                <Link className="btn">Contact Us</Link>
+                <Link to="/#contact-us"className="btn">Contact Us</Link>
       </div>
       </div>
       </div>
 
     </section>
-    </Layout>
   )
 }
 

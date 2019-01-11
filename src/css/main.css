@@ -1971,9 +1971,14 @@ input[type="submit"] {
 	}
 
 	.main {
-		padding-top: 155px;
+		padding-top: 160px;
 	}
-
+	.global-nav{
+		height:47px;
+	}
+	.btn:hover{
+		color:white;
+	}
 	.hero-holder {
 		min-height: 536px;
 	}
