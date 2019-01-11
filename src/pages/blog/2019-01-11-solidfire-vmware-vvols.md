@@ -3,7 +3,7 @@ templateKey: blog-post
 title: SolidFire & VMware VVols
 author: Terry Murray
 image: /img/sf-vp-imp.png
-date: 2019-01-11T17:05:44.189Z
+date: 2017-10-10T16:05:44.189Z
 description: >-
   I recently attended the Netapp Insight conference in Las Vegas. There were a
   lot of great speakers and sessions but for my money, the best one was Best
