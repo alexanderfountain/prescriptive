@@ -23,7 +23,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <Layout>
     <Helmet>
     <body class="innermenu" />
     </Helmet>
@@ -52,7 +52,7 @@ export const BlogPostTemplate = ({
       </div>
       </div>
 
-    </section>
+      </Layout>
   )
 }
 
