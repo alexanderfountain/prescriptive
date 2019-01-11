@@ -1503,7 +1503,9 @@ input[type="submit"] {
 	margin-bottom: 25px;
 	padding: 0 10px;
 }
-
+.contact-item strong{
+	color:white;
+}
 .contact-item:last-child {
 	margin-bottom: 0;
 }
