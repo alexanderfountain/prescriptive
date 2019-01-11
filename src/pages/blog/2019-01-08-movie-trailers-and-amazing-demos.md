@@ -11,7 +11,6 @@ description: >-
 tags:
   - cloud
 ---
-![](/img/movie-trailer-pic.jpg)
 
 Demos are a lot like movie trailers, they’re designed to highlight all the great things about a solution. We’ve all had the experience of getting pumped to see a new movie based on the trailer and then being let down when you realize those were all the good parts!
 

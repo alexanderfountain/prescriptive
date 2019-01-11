@@ -36,7 +36,7 @@ export default class BlogPage extends React.Component {
                     </Link>
                     <div class="who"><span class="blog-date"><i className="fa fa-calendar"></i>{post.frontmatter.date}</span> <span><i className="fa fa-user"></i>{post.frontmatter.author}</span></div>
                     <div class="teaser-body">
-                    {post.excerpt}
+                    {post.frontmatter.description}
                     </div>
                     <Link className="btn blog-btn" to={post.fields.slug}>
                       Read Full Article
@@ -67,12 +67,12 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
           id
           fields {
             slug
           }
           frontmatter {
+            description
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")

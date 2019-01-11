@@ -6,28 +6,41 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
+import blogindexheader from '../images/img01.jpg'
+import sidebarbg from '../images/pre-sidebar-rectangle.png'
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
+  image,
   tags,
+  date,
+  author,
   title,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
+    <Layout>
+      <Helmet>
+	      <body class="innermenu" />
+  	  </Helmet>
     <section className="section">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <div className="content blog-index-header" style={{ backgroundImage: `url(${blogindexheader})` }}>
+              <h2 className="header-title">Blog</h2>
+            </div>
+          <div class="blog-post-sidebar-container container">
+          <div className="blog-post-container">
+
+          <div><img src={image} /></div>
+            <h1 className="thetitle">
               {title}
             </h1>
-            <p>{description}</p>
+            <div class="who"><span class="blog-date"><i className="fa fa-calendar"></i>{date}</span> <span><i className="fa fa-user"></i>{author}</span></div>
             <PostContent content={content} />
-            {tags && tags.length ? (
+            {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
@@ -38,19 +51,30 @@ export const BlogPostTemplate = ({
                   ))}
                 </ul>
               </div>
-            ) : null}
-          </div>
-        </div>
+            ) : null} */}
+            <div class="blog-share"><span>SHARE THIS ARTICLE WITH A FRIEND</span><i className="fa fa-facebook-f"></i> <i className="fa fa-twitter"></i> <i className="fa fa-linkedin"></i></div>
       </div>
+      <div class="sidebar">
+      <div class="cta-contact" style={{ backgroundImage: `url(${sidebarbg})` }}>
+                <h3>Looking for Expert Advice?</h3>
+                <p>We're here happy to help</p>
+                <Link className="btn">Contact Us</Link>
+      </div>
+      </div>
+      </div>
+
     </section>
+    </Layout>
   )
 }
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
+  image: PropTypes.string,
+  date: PropTypes.string,
+  author: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
 }
 
@@ -58,16 +82,16 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        image={post.frontmatter.image}
+        date={post.frontmatter.date}
+        author={post.frontmatter.author}
       />
-    </Layout>
   )
 }
 
@@ -87,8 +111,9 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         tags
+        image
+        author
       }
     }
   }
