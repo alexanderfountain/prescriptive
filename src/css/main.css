@@ -2113,20 +2113,44 @@ body {
 .blog-index{
 	display:flex;
 	flex-wrap:wrap;
-	justify-content: space-between;
 } 
 .blog-index .content{
-	flex-basis:calc(33% - 25px);
-	width:calc(33% - 60px);
+	width:calc((100%)/3 - 34px);
+    flex-basis: calc((100%)/3 - 33.3333333px);
+    margin-right: 50px;
 	background-color:#ebebeb;
 	padding:35px;
-	margin-bottom:25px !important;
+	margin-bottom:50px !important;
 	color:#56575b !important;
 }
-@media (max-width: 1024px) {
+.blog-index > div:nth-child(3n+3) {
+    margin-right: 0px;
+}
+@media (max-width: 1124px) {
 	.blog-index .content{
-		flex-basis:calc(100%);
+		width:calc((100%)/2 - 25px);
+		flex-basis: calc((100%)/2 - 25px);
+		margin-right: 25px;
+		margin-bottom:25px !important;
+	}
+	.blog-index > div:nth-child(3n+3) {
+		margin-right: 25px;
+	}
+	.blog-index > div:nth-child(3n+2) {
+		margin-right: 0px;
+	}
+}
+@media (max-width: 800px) {
+	.blog-index .content{
 		width:calc(100%);
+		flex-basis: calc(100%);
+		margin-right: 0px;
+	}
+	.blog-index > div:nth-child(3n+3) {
+		margin-right: 0px;
+	}
+	.blog-index > div:nth-child(3n+2) {
+		margin-right: 0px;
 	}
 }
 .blog-index .content a.has-text-primary{
