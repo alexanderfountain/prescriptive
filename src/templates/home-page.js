@@ -239,7 +239,7 @@ export const HomePageTemplate = ({ title, intro, services, content, contentCompo
 									<textarea name="textarea" id="textarea" class="textarea form-control" data-required="true" data-trim="true"/>
 								</div>
 								<div>
-									<button type="submit" class="btn btn-submit">Send Message /</button>
+									<button type="submit" class="btn btn-submit">Send Message</button>
 								</div>
 							</form>
 

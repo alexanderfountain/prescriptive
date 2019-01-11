@@ -423,7 +423,9 @@ td,
 th {
 	padding: 0;
 }
-
+body strong{
+	color: #646772;
+}
 @font-face {
 	font-family: "Roboto";
 	src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff");
@@ -1641,7 +1643,10 @@ input[type="submit"] {
 .copy {
 	font-size: 16px;
 }
-
+.hero-holder {
+    display: flex;
+    align-items: center;
+}
 @media (min-width: 480px) {
 	.hero {
 		display: -webkit-box;
