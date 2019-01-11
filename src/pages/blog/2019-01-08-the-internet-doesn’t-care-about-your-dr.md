@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: The Internet Doesn’t Care About Your DR!
+author: Terry Murray
+image: /img/capture.png
 date: 2018-03-28T12:00:00.000Z
 description: I love it when things just work!
 tags:
