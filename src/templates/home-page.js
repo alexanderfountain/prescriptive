@@ -145,10 +145,10 @@ export const HomePageTemplate = ({ title, intro, services, content, contentCompo
 
 								<ul class="list-social">
 									<li>
-										<a target ="_blank" href="https://www.linkedin.com/in/terry-murray-59aa63/"><span class="icon-linkedin"></span></a>
+										<a target="_blank" href="https://www.linkedin.com/in/terry-murray-59aa63/"><span class="icon-linkedin"></span></a>
 									</li>
 									<li>
-										<a target ="_blank" href="https://twitter.com/terrybmurray"><span class="icon-tweet"></span></a>
+										<a target="_blank" href="https://twitter.com/terrybmurray"><span class="icon-tweet"></span></a>
 									</li>
 								</ul>
 							</div>
@@ -167,10 +167,10 @@ export const HomePageTemplate = ({ title, intro, services, content, contentCompo
 								</div>
 								<ul class="list-social">
 									<li>
-										<a href="https://www.linkedin.com/in/joemgalvan/"><span class="icon-linkedin"></span></a>
+										<a target="_blank" href="https://www.linkedin.com/in/joemgalvan/"><span class="icon-linkedin"></span></a>
 									</li>
 									<li>
-										<a href="https://twitter.com/jgalvanatx"><span class="icon-tweet"></span></a>
+										<a target="_blank"href="https://twitter.com/jgalvanatx"><span class="icon-tweet"></span></a>
 									</li>
 								</ul>
 							</div>
@@ -189,10 +189,10 @@ export const HomePageTemplate = ({ title, intro, services, content, contentCompo
 								</div>
 								<ul class="list-social">
 									<li>
-										<a target ="_blank" href="https://www.linkedin.com/in/jurichards/"><span class="icon-linkedin"></span></a>
+										<a target="_blank" href="https://www.linkedin.com/in/jurichards/"><span class="icon-linkedin"></span></a>
 									</li>
 									<li>
-										<a target ="_blank" href="https://twitter.com/72stroker"><span class="icon-tweet"></span></a>
+										<a target="_blank" href="https://twitter.com/72stroker"><span class="icon-tweet"></span></a>
 									</li>
 								</ul>
 							</div>
