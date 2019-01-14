@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../images/Prescriptive-new-logo-resized.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { elastic as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 
 const Mobilemenu = () => (
   <div className="mobile-container" style={{position: 'relative'}}>

@@ -2425,3 +2425,10 @@ h1.thetitle{
 	color:#d23026;
 	margin-left:30px;
 }
+#contact-us:before, #services:before, #header:before { 
+	display: block; 
+	content: " "; 
+	margin-top: -158px; 
+	height: 158px; 
+	visibility: hidden; 
+  }

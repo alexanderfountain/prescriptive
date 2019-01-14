@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Link } from 'gatsby'
 import logo from '../images/Prescriptive-new-logo-resized.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'

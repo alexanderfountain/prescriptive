@@ -36,6 +36,11 @@
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
     "react-pose": "^4.0.5",
+    "react-scroll": "^1.7.10",
+    "react-scroll-to-element": "^0.2.0",
+    "react-scrollable-anchor": "^0.6.1",
+    "react-scrollspy": "^3.3.5",
+    "react-waypoint": "^8.1.0",
     "smooth-scroll": "^12.1.5",
     "uuid": "^3.2.1"
   },
