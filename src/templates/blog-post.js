@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import '../../node_modules/font-awesome/css/font-awesome.min.css'; 
 
-import blogindexheader from '../images/img01.jpg'
+import blogindexheader from '../images/fancycrave-530798-unsplash.jpg'
 import sidebarbg from '../images/pre-sidebar-rectangle.png'
 
 export const BlogPostTemplate = ({

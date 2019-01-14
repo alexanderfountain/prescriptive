@@ -1,8 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
-
 const Topsocial = () => (
   <div class="global-nav">
 <div class="container">
@@ -10,12 +7,12 @@ const Topsocial = () => (
     
     <ul class="social">
       <li>
-        <Link to="https://twitter.com/PDS_Technology" target="blank"><span class="icon-twitter"></span></Link>
+        <a href="https://twitter.com/PDS_Technology" target="_blank"><span class="icon-twitter"></span></a>
       </li>
     </ul>
     <ul class="global-list">
       <li><Link to="/blog">Blog</Link></li>
-      <li><Link to="#">Careers</Link></li>
+      {/* <li><Link to="#">Careers</Link></li> */}
     </ul> 
   </div>
 </div>

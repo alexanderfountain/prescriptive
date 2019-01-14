@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import '../../node_modules/font-awesome/css/font-awesome.min.css'; 
 
-import blogindexheader from '../images/img01.jpg'
+import blogindexheader from '../images/fancycrave-530798-unsplash.jpg'
 
 
 export default class BlogPage extends React.Component {
