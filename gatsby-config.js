@@ -3,6 +3,24 @@ module.exports = {
     title: 'Gatsby + Netlify CMS Starter',
   },
   plugins: [
+    {
+    resolve: `gatsby-plugin-favicon`,
+    options: {
+      logo: "./src/favicon.png",
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
+    },
+  },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
