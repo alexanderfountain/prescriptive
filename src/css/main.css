@@ -663,7 +663,7 @@ ul{
 ul li{
 	list-style:none;
 }
-p ul li::before{
+.blog-post-container ul li::before{
 	content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
 	color: #d23026; /* Change the color */
 	font-weight: bold; /* If you want it to be bold */
