@@ -37,13 +37,10 @@ If you’re not familiar with SolidFire here is a quick overview:
 
 ## **SolidFire Overview**
 
-SolidFire is an all flash, Scale Out block storage solution. You can build a solution with as few as 4 nodes and scale up to 100. Netapp says there is no technical limitation that keeps them from scaling beyond 100 nodes.
-
-SolidFire is certainly not the only Scale Out storage solution but most of the others were built either for NAS or modest workloads. Assuming 5x data reduction from compression and deduplication you can scale to 7.4PB and up to 10 Million IOPS in a single cluster.
-
-Quality of Service. Perhaps what SolidFire is best known for is their quality of service capabilities. Yes, just about every modern array has a check box that says they do QoS but not like SolidFire. SolidFire allows you to assign Guaranteed Minimum IOPS, Maximum IOPS and Burst IOPS. You can safely run your VDI environment and your Oracle ERP on the same cluster kind of guarantee.
-
-Most of what you hear about SolidFire is how it is being used by Service Providers. Obviously QoS is a big reason for solution providers adopting it but also the fact that it was built from the ground up to be managed via APIs. The GUI uses the API and everything you can do from the GUI, you can do from the API. More importantly, people are actually using the API, so there are tons of already built integration options. Take a gander if you are interested. <https://github.com/solidfire>  This matters a lot to Service Providers because they need to enforce standards and automate everything.
+* SolidFire is an all flash, Scale Out block storage solution. You can build a solution with as few as 4 nodes and scale up to 100. Netapp says there is no technical limitation that keeps them from scaling beyond 100 nodes.
+* SolidFire is certainly not the only Scale Out storage solution but most of the others were built either for NAS or modest workloads. Assuming 5x data reduction from compression and deduplication you can scale to 7.4PB and up to 10 Million IOPS in a single cluster.
+* Quality of Service. Perhaps what SolidFire is best known for is their quality of service capabilities. Yes, just about every modern array has a check box that says they do QoS but not like SolidFire. SolidFire allows you to assign Guaranteed Minimum IOPS, Maximum IOPS and Burst IOPS. You can safely run your VDI environment and your Oracle ERP on the same cluster kind of guarantee.
+* Most of what you hear about SolidFire is how it is being used by Service Providers. Obviously QoS is a big reason for solution providers adopting it but also the fact that it was built from the ground up to be managed via APIs. The GUI uses the API and everything you can do from the GUI, you can do from the API. More importantly, people are actually using the API, so there are tons of already built integration options. Take a gander if you are interested. <https://github.com/solidfire>  This matters a lot to Service Providers because they need to enforce standards and automate everything.
 
 It’s a very cool solution but I knew that walking in. What I wanted to know more about was, how it would fit in most of the enterprise environments we work with. Certainly, we have clients looking to take a Service Provider stance and leverage automation tools but the vast majority are running good old VMware.
 
