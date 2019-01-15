@@ -1088,7 +1088,9 @@ input[type="submit"] {
 }
 
 /*btn style*/
-
+.bm-item-list a:last-child{
+	color: #d23026;
+}
 .btn {
 	display: inline-block;
 	text-decoration: none;

@@ -12,8 +12,8 @@ const Mobilemenu = () => (
         <AnchorLink offset='158' href="#header">Home</AnchorLink>
         <AnchorLink offset='158' href="#services">Services</AnchorLink>
         <AnchorLink offset='158' href="#about">About</AnchorLink>
-        <AnchorLink offset='158' href="#contact-us" class="mobile-btn">Contact</AnchorLink>
         <Link to="/blog">Blog</Link>
+        <AnchorLink offset='158' href="#contact-us" class="mobile-btn">Contact</AnchorLink>
   </Menu>
   </div>
 )
