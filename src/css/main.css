@@ -665,10 +665,13 @@ ul li{
 }
 .blog-post-container ul li{
 	list-style-type: disc;
+	margin-bottom:8px;
+	font-size: 18px;
 }
-/* .blog-post-container ol li{
-	list-style-type: disc;
-} */
+.blog-post-container ol li{
+	margin-bottom:8px;
+	font-size: 18px;
+}
 .blog-post-container ul, .blog-post-container ol{
 	margin: 0 0 1em;
 }
