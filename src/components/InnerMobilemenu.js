@@ -11,6 +11,7 @@ const InnerMobilemenu = () => (
         <Link to="/#services">Services</Link>
         <Link to="/#about">About</Link>
         <Link to="/#contact-us" class="btn btn-sm">Contact</Link>
+        <Link to="/blog">Blog</Link>
   </Menu>
   </div>
 )

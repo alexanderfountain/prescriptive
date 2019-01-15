@@ -7,7 +7,7 @@ import Mobilemenu from '../components/Mobilemenu'
 const Navbar = () => (
 <div className="main-nav main-nav-home">
 <div className="container">
-  <Link to="/" class="navbar-brand">
+  <Link to="/" class="navbar-brand brander">
     <img style={{width: "355px"}} src={logo} alt="prescriptive" />
   </Link>
   <nav className="nav">

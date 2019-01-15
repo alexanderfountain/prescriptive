@@ -34,7 +34,10 @@ export default class BlogPage extends React.Component {
                     <Link className="has-text-primary" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
-                    <div class="who"><span class="blog-date"><i className="fa fa-calendar"></i>{post.frontmatter.date}</span> <span><i className="fa fa-user"></i>{post.frontmatter.author}</span></div>
+                    <div class="who">
+                    <div class="blog-date" style={{marginBottom: "10px"}}><i className="fa fa-calendar"></i>{post.frontmatter.date}</div> 
+                    <div><i className="fa fa-user"></i>{post.frontmatter.author}</div>
+                    </div>
                     <div class="teaser-body">
                     {post.frontmatter.description}
                     </div>
