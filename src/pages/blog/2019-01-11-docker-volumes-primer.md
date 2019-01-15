@@ -46,7 +46,7 @@ Using docker run it’s easy to create a container that mounts testvol01.  So le
 
 Everything is working as expected, the directory and file are still there and the contents look good. If the container died, was accidentally removed, upgraded, etc another container or containers could be created and mount/remount the volume. Issue the same command to recreate the container and we get a different id but mount the same volume.
 
-![null](/img/docker_5.png)
+![docker volume testing](/img/docker_5.png)
 
 One of the huge benefits of using Docker volumes is their creation upon container instantiation. There is no special flag needed, if the “source” doesn’t exist it will be automatically created. Let’s create a new container without an existing volume.
 
