@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The saga of Ansible and the broken Windows Subsystem for Linux (WSL)
 author: Ian Evans
-image: /img/ansible.png
+image: ''
 date: 2017-09-20T16:13:26.598Z
 description: >-
   While working on another project I ran into an issue running the Cloud/VMware
@@ -15,8 +15,6 @@ tags:
   - VMware
   - WSL
 ---
-
-
 ## **The problem: ain’t nothin’ easy.**
 
 While working on another project I ran into an issue running the Cloud/VMware modules for Ansible. No mater what I did it appeared broken. Newer module features required a newer version of Ansible. But I was being denied, stuck at 1.8 and no amount of apt foo seemed to resolve the issue. I didn’t want to spin up a VM for this. You see, I’ve been happily plugging along using WSL (based on Ubuntu) for quite a while. I even waited out the network issues (believe it or not at one time ping didn’t work!) Anyway…  At some point I had the idea to check the release file…14.04. Well poop! I needed a new version of WSL but it was not a straightforward as I hoped, probably because I was an early adopter. I was going to have to remove it and reinstall. Since I’m having issues I want to make sure I get it all. Doing that will clobber all my stuff! Double poop!
@@ -24,19 +22,16 @@ While working on another project I ran into an issue running the Cloud/VMware mo
 ## **Step 1: Upgrading WSL**
 
 1. Backup your stuff, even if you don’t plan on using /full (see below), just in case. I used tar to shuffle it all off to a directory on /mnt/c. There is no going back, make sure you get it all, even that crud we old Solaris admins put in /opt.
-
-2. Open a privileged command prompt or powershell window and whack it without confirmation. Speaking of Solaris… how many old UNIX geeks remember the original implementation of the lxrun command?
+2. Open a privileged command prompt or powershell window and whack it without confirmation. Speaking of Solaris… how many old UNIX geeks remember the original implementation of the [lxrun](https://en.wikipedia.org/wiki/Lxrun) command?
 
 ![ansible testing](/img/ansible_1.png)
 
 3. Sit back and wait.
-
 4. When finished add it back with:
 
 ![ansible testing](/img/ansible_2.png)
 
 5. Wait again, maybe get a snack or coffee or something and come back.
-
 6. Yay it’s done!
 
 ## **Step 2: Installing a shiny new Ansible**
@@ -61,15 +56,13 @@ Go ahead and eat that caked you looked at earlier. Yum!
 
 ![ansible testing](/img/ansible_5.png)
 
-3. After a bit you should have 2.3.2.0 ready to go, let’s check.
+3. After a bit you should have 2.3.2.0 ready to go, let’s check. I wasn’t expecting /usr/local/bin but I guess I can deal.
 
 ![ansible testing](/img/ansible_6.png)
 
-I wasn’t expecting /usr/local/bin but I guess I can deal.
-
 4. Since we have nothing better to do let’s get it all upgraded.
 
-![ansible testing](/img/ansible_7.png)
+![ansible testing](/img/ansible_8.png)
 
 5. For the Ansible VMware modules we’re going to need pyvmomi.
 
@@ -93,8 +86,8 @@ and evidently we need pysphere ..? Maybe something out of order or I forgot some
 
 It was a bit of a journey to get to this point but worth the effort. It’s handy having a local install to work with when on the go without the need to run a VM. Here is the playbook I used to test, basically a cut and paste from the docs wrapped up just enough to run. I cut my original into tiny bits when this first started trying to figure out what I was doing wrong.
 
-![ansible testing](/img/screen-shot-2019-01-14-at-1.16.39-pm.png)
+![ansible testing](/img/ansible_13.png)
 
 Now onto the next…
 
-![](/img/lagavulin.png)
+![null](/img/lagavulin.png)
