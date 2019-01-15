@@ -29,6 +29,7 @@ export const BlogPostTemplate = ({
     </Helmet>
 
       {helmet || ''}
+      <section className="section">
             <div className="content blog-index-header" style={{ backgroundImage: `url(${blogindexheader})` }}>
               <h2 className="header-title">Blog</h2>
             </div>
@@ -51,7 +52,7 @@ export const BlogPostTemplate = ({
       </div>
       </div>
       </div>
-
+      </section>
       </Layout>
   )
 }
