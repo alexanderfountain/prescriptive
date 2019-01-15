@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Docker Volumes Primer
 author: Ian Evans
-image: /img/docker_volume_1.png
+image: ''
 date: 2017-11-13T16:39:12.563Z
 description: >-
   One of the most common barriers to Docker adoption for production deployments
@@ -22,7 +22,7 @@ Fortunately Docker is used extensively by developers, it’s original use case, 
 
 The easiest way to get started is with local volumes. Further along in the series we’ll explore other DVPs. If you want to follow along please use Docker 17.06-ce or newer. You’ll need Docker 17.06 to use the –mount option for standalone Docker instead of -v. Prior to 17.06 –mount was only used for a Docker Swarm. Since –mount is now universal I’m only going to use that. Let’s get to the fun stuff. To demonstrate let’s confirm there are no volumes then create a few.
 
-![Docker volume testing code](/img/docker_volume_1.png)
+![docker volume testing](/img/docker_1.png)
 
 * The first docker volume create command created a volume with no options and a volume name was also created for us or “anonymous volume”. While this is great if used programmatically it sucks for humans who may be doing things interactively or troubleshooting.
 * Names are better for humans and the second command gives us just that, a “named volume”.
@@ -32,29 +32,29 @@ The easiest way to get started is with local volumes. Further along in the serie
 
 So what happened? To get a better understanding we need to look a little deeper and we do that with docker volume inspect. As you would expect it behaves very much like docker inspect pumping out some nice JSON. Let’s compare the unnamed volume and the named volumes testvol01 and testvol3.
 
-![Docker volume testing code](/img/docker_volume_2.png)
+![docker volume testing](/img/docker_2.png)
 
 The keys are mostly self explanatory, of the most interest now is Mountpoint.  This is actually a directory on the Docker host with the sub-directory _data. This directory was created in the default location. The permissions for /var/lib/docker/volumes/ and the volume directory are restricted to root:root. Docker handles the heavy lifting behind the scenes so the container has access but not everyone in the docker group has access to all volumes. Good or bad root can get in there and muck around, useful info.
 
 A volume on it’s own isn’t very useful so let’s clean up all volumes except testvol01 and mount that volume into a container. To remove a volume we use docker volume remove or docker volume rm either will work. The command accepts multiple so we can hammer them all at once.
 
-![Docker volume testing code](/img/docker_3.png)
+![docker volume testing](/img/docker_3.png)
 
 Using docker run it’s easy to create a container that mounts testvol01.  So let’s create testinst01 and write some data into a container volume mount point. Since the whole point is data persistence we’ll remove the container. The volume and data should hang around. Let’s test it out using Alpine Linux.
 
-![Docker volume testing code](/img/docker_4.png)
+![docker volume testing](/img/docker_4.png)
 
 Everything is working as expected, the directory and file are still there and the contents look good. If the container died, was accidentally removed, upgraded, etc another container or containers could be created and mount/remount the volume. Issue the same command to recreate the container and we get a different id but mount the same volume.
 
-![Docker volume testing code](/img/docker_5.png)
+![](/img/docker_5.png)
 
 One of the huge benefits of using Docker volumes is their creation upon container instantiation. There is no special flag needed, if the “source” doesn’t exist it will be automatically created. Let’s create a new container without an existing volume.
 
-![Docker volume testing code](/img/docker_6.png)
+![docker volume testing](/img/docker_6.png)
 
 Yep, there it is. A new empty volume named testvol02. Multiple containers can also mount the same volume read-write. To do that create a container with the same volume “source”. It’s also possible to stomp on volume data if you’re not careful, there is no “locking”. Thankfully there is a read-only mount option as well. Handy, no? Nothing special is required to share the mount just create as normal and optionally mount read-only.
 
-![Docker volume testing code](/img/docker_7.png)
+![docker volume testing](/img/docker_7.png)
 
 After execution there are now three containers. First testinst01 and testinst02 both with volumes mounted at /testvol from the previous examples. Finally the new container testinst03 with the volume testvol02 that was created with testinst02 mounted at /testvol. However, it’s mounted readonly and any attempt to modify content under /testvol  in testinst03 will result in the “Read-only file system” error.
 
