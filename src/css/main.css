@@ -1106,6 +1106,7 @@ input[type="submit"] {
 
 .btn:hover {
 	background-color: #3d3f46;
+	color:white;
 }
 
 .recaptcha {
