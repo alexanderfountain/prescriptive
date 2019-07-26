@@ -31,6 +31,14 @@ import partner32 from '../images/img32.png'
 import partner33 from '../images/img33.png'
 import partner34 from '../images/img34.png'
 import partner35 from '../images/img35.png'
+
+import partner36 from '../images/bitdefender-white.svg'
+import partner37 from '../images/cylance-white.svg'
+import partner38 from '../images/forcepoint-white.svg'
+import partner39 from '../images/mimecast-white.svg'
+import partner40 from '../images/proofpoint-white.svg'
+import partner41 from '../images/varonis-white.svg'
+
 import cta36 from '../images/img36.png'
 
 export const HomePageTemplate = ({ title, intro, services, content, contentComponent }) => {
@@ -318,6 +326,12 @@ export const HomePageTemplate = ({ title, intro, services, content, contentCompo
 						<div class="partner-item"><img src={partner33} alt="veeam" /></div>
 						<div class="partner-item"><img src={partner34} alt="vmware" /></div>
 						<div class="partner-item"><img src={partner35} alt="zerto" /></div>
+						<div class="partner-item"><img src={partner36} alt="bitdefender" /></div>
+						<div class="partner-item"><img src={partner37} alt="cylance" /></div>
+						<div class="partner-item"><img src={partner38} alt="forcepoint" /></div>
+						<div class="partner-item"><img src={partner39} alt="mimecast" /></div>
+						<div class="partner-item"><img src={partner40} alt="proofpoint" /></div>
+						<div class="partner-item"><img src={partner41} alt="varonis" /></div>
 					</div>
 				</div>
 

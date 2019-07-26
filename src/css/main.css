@@ -2096,6 +2096,7 @@ input[type="submit"] {
 
 	.partner-item {
 		margin: 0 27px 34px;
+		max-width:192px;
 	}
 
 	.call-to-action {
@@ -2462,3 +2463,7 @@ h1.thetitle{
 		color:white;
 	}
   }
+  	.partner-item {
+		margin: 0 27px 34px;
+		max-width:192px;
+	}
